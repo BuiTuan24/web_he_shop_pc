@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB CỦA TUẤN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<header>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <a href="#">
+                <i class="bi bi-geo-alt"></i> 
+                Hệ thống showroom</a>
+            <a href="#">
+                <i class="bi bi-phone"></i> 
+                Bán hàng trực tuyến</a>
+            <a href="#">
+                <i class="bi bi-shield-check"></i> 
+                Dịch vụ bảo hành tại nhà</a>
+            <a href="#">
+                <i class="bi bi-controller"></i>
+                Giới thiệu</a>
+            <a href="#">
+                <i class="bi bi-archive"></i> 
+                Tra cứu bảo hành</a>
+            <a href="#">
+                <i class="bi bi-arrow-left-right"></i> 
+                Thu cũ đổi mới</a>    
+        </div>
+
+        <div class="top-right">
+            <a href="#"><i class="bi bi-person-square"></i> Đăng nhập</a>
+            <a href="#"><i class="bi bi-person-plus"></i> Đăng ký</a>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <div class="main-header">
+
+        <div class="logo">
+            WEB CỦA TUẤN
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Nhập từ khóa cần tìm">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="header-actions">
+            <a href="#"><i class="bi bi-telephone"></i> Hotline</a>
+            <a href="#"><i class="bi bi-laptop"></i> Xây dựng cấu hình PC</a>
+            <a href="#"><i class="bi bi-cart"></i> Giỏ hàng </a>
+        </div>
+
+    </div>
+
+    <nav class="category-menu">
+    <!-- 1. Laptop -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-laptop"></i> Laptop</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Laptop Gaming</a>
+                <a href="#">Laptop Văn Phòng</a> 
+                <a href="#">Laptop Đồ Họa</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Phần Mềm -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-tablet"></i> Phần Mềm</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Windows Bản Quyền</a>
+                <a href="#">Office 365</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. MAIN -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-motherboard"></i> MAIN</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Mainboard ASUS</a>
+                <a href="#">Mainboard MSI</a>
+                <a href="#">Mainboard Gigabyte</a>
+                <a href="#">Mainboard ASRock</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. CPU -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-cpu"></i> CPU</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Intel Core</a>
+                <a href="#">AMD Ryzen</a>
+                <a href="#">Intel Xeon</a>
+                <a href="#">AMD Threadripper</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. RAM -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-memory"></i> RAM</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">RAM DDR4</a>
+                <a href="#">RAM DDR5</a>
+                <a href="#">RAM Laptop</a>
+                <a href="#">RAM theo Buss</a>
+                <a href="#">RAM theo dung lượng</a>
+                <a href="#">RAM theo hãng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. VGA -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-gpu-card"></i> VGA</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">NVIDIA GeForce</a>
+                <a href="#">AMD Radeon</a>
+                <a href="#">VGA theo hãng</a>
+                <a href="#">VGA RTX theo series</a>
+                <a href="#">VGA train AI, Sever</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. PC cả bộ theo hãng -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-pc"></i> PC cả bộ theo hãng</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">PC ASUS ROG</a>
+                <a href="#">PC MSI Gaming</a>
+                <a href="#">PC Gigabyte AORUS</a>
+                <a href="#">PC AMD</a>
+                <a href="#">PC Intel</a>
+                <a href="#">PC Workstation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Ổ cứng -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-hdd"></i> Ổ cứng</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Ổ cứng SSD</a>
+                <a href="#">Ổ cứng HDD</a>
+                <a href="#">Ổ cứng M.2 NVMe</a>
+                <a href="#">Ổ cứng di động</a>
+                <a href="#">Ổ cứng theo dung lượng</a>
+                <a href="#">Ổ cứng theo hãng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Case -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-box"></i> Case</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Case Kính Cường Lực</a>
+                <a href="#">Case Mini-ITX</a>
+                <a href="#">Case Mid-Tower</a>
+                <a href="#">Case Full-Tower</a>
+                <a href="#">Case theo hãng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. Màn Hình -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-tv"></i> Màn Hình</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Màn hình 24 inch</a>
+                <a href="#">Màn hình 2K / 4K</a>
+                <a href="#">Màn hình theo hãng</a>
+                <a href="#">Màn hình cong</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. Gaming Gear -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-keyboard"></i> Gaming Gear</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Bàn Phím Cơ</a>
+                <a href="#">Chuột Gaming</a>
+                <a href="#">Tai Nghe Gaming</a>
+                <a href="#">Bàn Di Chuột</a>
+                <a href="#">Ghế Gaming</a>
+                <a href="#">Bàn Gaming</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Tản nhiệt -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-fan"></i> Tản nhiệt</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Tản Nhiệt Khí</a>
+                <a href="#">Tản Nhiệt Nước AIO</a>
+                <a href="#">Tản Nhiệt Nước Custom</a>
+                <a href="#">Tản Nhiệt theo hãng</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13. Hàng đã qua sử dụng -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="bi bi-receipt"></i> Hàng đã qua sử dụng</a>
+        <div class="dropdown-content">
+            <div class="dropdown-content-inner">
+                <a href="#">Linh Kiện Cũ Giá Rẻ</a>
+                <a href="#">Laptop Cũ Like New</a>
+                <a href="#">PC Cũ Giá Rẻ</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-banner">
+    
+    <div class="hero-banner-slide active">
+        <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+            <img src="image/image5.png" alt="Mô tả tấm ảnh">
+        </a>
+    </div>
+
+    
+    <div class="hero-banner-slide">
+        <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+            <img src="image/image6.png" alt="Mô tả tấm ảnh">
+        </a>
+    </div>
+
+   
+    <div class="hero-banner-slide">
+        <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+            <img src="image/image7.png" alt="Mô tả tấm ảnh">
+        </a>
+    </div>
+
+    
+    <div class="hero-banner-slide">
+        <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+            <img src="image/image8.png" alt="Mô tả tấm ảnh">
+        </a>
+    </div>
+
+    
+    <div class="hero-banner-slide">
+        <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+            <img src="image/image9.png" alt="Mô tả tấm ảnh">
+        </a>
+    </div>
+</div>
+
+
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>TUẤN SHOP PC</h1>
+
+            <div class="hero-buttons">
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image1.png" alt="Màn Hình">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image2.png" alt="PC rẻ">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image3.png" alt="Phù kiện gaming">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image1.png" alt="Mô tả tấm ảnh">
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Flash sale -->
+    <section class="flash-sale">
+
+        <h2>FLASH SALE <i class="bi bi-lightning-charge-fill"></i></h2>
+
+        <p>
+            Chương trình Flash sale diễn ra hàng tuần để mang đến cho khách hàng những sản phẩm chất lượng với giá ưu đãi nhất. Hãy nhanh tay đặt hàng trước khi hết hàng!
+        </p>
+        <div class="hero-flash-sale">
+    
+    <div class="hero-buttons">
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image1.png" alt="Màn Hình">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image2.png" alt="PC rẻ">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image3.png" alt="Phù kiện gaming">
+                </a>
+                <a href="none" target="_blank">
+                    <img src="image\image1.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+                <a href="https://www.youtube.com/@kccshopvn" target="_blank">
+                    <img src="image\image4.png" alt="Mô tả tấm ảnh">
+                </a>
+            </div>
+
+</div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <h2>Dịch vụ nổi bật</h2>
+
+        <div class="card-container">
+
+            <a href="#" class="card">deal1</a>
+            <a href="#" class="card">deal2</a>
+            <a href="#" class="card">deal3</a>
+
+            <a href="#" class="card">deal4</a>
+            <a href="#" class="card">deal5</a>
+            <a href="#" class="card">deal6</a>
+            <a href="#" class="card">deal7</a>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN 1 -->
+    <section class="main-section">
+        <h2>Nội dung 1</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">Hotpeak1</a>
+            <a href="#" class="card">Hotpeak2</a>
+        </div>
+    </section>
+
+    <!-- MAIN 2 -->
+    <section class="main-section">
+        <h2>Nội dung 2</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">
+
+            <div class="card-title">Stater</div>
+
+            <div class="card-description">giá rẻ chỉ 2 tỷ/ngày cho người mới.</div>
+            
+            <button>ĐĂNG KÝ</button>
+
+        </a>
+            <a href="#" class="card">professional</a>
+            <a href="#" class="card">team</a>
+        </div>
+    </section>
+
+    <!-- MAIN 3 -->
+    <section class="main-section">
+        <h2>Nội dung 3</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">Card 1</a>
+        </div>
+    </section>
+
+    <!-- MAIN 4 -->
+    <section class="main-section">
+        <h2>Nội dung 4</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">Visit our space</a>
+            <a href="#" class="card">Start Ur Journey</a>
+        </div>
+    </section>
+
+    <!-- MAIN 5 -->
+    <section class="main-section">
+        <h2>Nội dung 5</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">Card 1</a>
+            <a href="#" class="card">Card 1</a>
+            <a href="#" class="card">Card 1</a>
+        </div>
+    </section>
+
+    <!-- MAIN 6 -->
+    <section class="main-section">
+        <h2>Nội dung 6</h2>
+
+        <div class="card-container">
+            <a href="#" class="card">Card 1</a>
+            <a href="#" class="card">Card 1</a>
+            <a href="#" class="card">Card 1</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h2>Liên hệ</h2>
+
+        <p>Email: contact@tkweb.com</p>
+
+        <p>Điện thoại: 0123 456 789</p>
+
+        <p>© 2025 TKWEB</p>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+
+</html>

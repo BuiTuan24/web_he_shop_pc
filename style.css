@@ -1,0 +1,298 @@
+*{
+    margin:10px 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#c74e1f;
+    color:white;
+    padding:8px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-bar a{
+    color:white;
+    text-decoration:none;
+    margin-right:75px;
+    font-size:20px;
+}
+
+.top-right a{
+    margin-right:50px;
+    margin-left:20px;
+}
+/* MAIN HEADER */
+.main-header{
+    background:white;
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff7a00;
+}
+
+.search-box{
+    flex:1;
+    max-width:800px;
+    margin:0 60px;
+    display:flex;
+    
+}
+
+.search-box input{
+    flex:1;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:30px 0 0 30px;
+    outline:none;
+}
+
+.search-box button{
+    padding:0 25px;
+    border:none;
+    background:#ff7a00;
+    color:white;
+    border-radius:0 30px 30px 0;
+    cursor:pointer;
+}
+
+.header-actions{
+    display:flex;
+    gap:30px;
+    
+}
+.header-actions a{
+    color:rgb(241, 119, 4);
+    font-size:25px;
+}
+
+
+.category-menu {
+    background: #fc6705;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    padding: 18px;
+}
+
+.category-menu a,
+.category-menu .dropdown-btn {
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(241, 15, 15);
+}
+
+/* --- ĐOẠN CSS DROPDOWN MỚI (CHỐNG TRƯỢT CHUỘT) --- */
+.category-menu .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.category-menu .dropdown-content {
+    display: none;             
+    position: absolute;        
+    top: 100%;                 
+    left: 50%;                 
+    transform: translateX(-50%); 
+    z-index: 100;
+    margin-top: 0;            
+}
+
+
+.category-menu .dropdown-content-inner {
+    background-color: #ffffff; 
+    min-width: 240px;          
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 4px 12px rgba(235, 147, 33, 0.938); 
+    border-radius: 6px;
+    
+   
+    padding: 10px 0;            
+    margin-top: 20px;           
+}
+
+
+.category-menu .dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;   /* Lớp nền trong suốt giữ chuột luôn hợp lệ */
+}
+
+.category-menu .dropdown-content-inner a {
+    color: #333333 !important; 
+    padding: 12px 25px;        
+    display: block;            
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;       
+}
+
+.category-menu .dropdown-content-inner a:hover {
+    background-color: #f5f5f5; 
+    color: #fc6705 !important; 
+}
+
+/* Kích hoạt hành động hiển thị menu khi rê chuột */
+.category-menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* HERO */
+.hero{
+    height: 500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:80px;
+    margin-bottom:30px;
+    color:#ff7a00;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.hero-buttons button{
+    padding:15px 30px;
+}
+
+.hero-banner {
+    position: relative; /* Làm mốc định vị cho các slide con chồng lên nhau */
+    width: 100%;
+    height: 700px;      /* Độ cao của banner, bạn có thể tự chỉnh lại cho vừa mắt */
+    
+    background-color: #f0f0f0; /* Nền xám nhẹ dự phòng khi ảnh đang tải */
+}
+
+/* 2. Định dạng cho từng slide ảnh - ÉP CHÚNG CHỒNG LÊN NHAU */
+.hero-banner-slide {
+    position: absolute; /* Ép tất cả các slide nằm đè lên cùng 1 tọa độ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;         /* Mặc định ẨN tất cả các ảnh đi */
+    transition: opacity 0.8s ease-in-out; /* Tạo hiệu ứng mờ dần khi đổi ảnh rất mượt */
+    z-index: 1;         /* Nằm ở lớp dưới */
+}
+
+/* 3. Slide nào có class .active (do JS kích hoạt) thì hiện lên rõ nét */
+.hero-banner-slide.active {
+    opacity: 1;         /* HIỆN ảnh rõ nét */
+    z-index: 2;         /* Đẩy lên lớp trên để người dùng nhìn thấy */
+}
+
+/* 4. Định dạng cho thẻ a và thẻ img bên trong slide */
+.hero-banner-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Giúp ảnh tự co giãn đầy khung mà không bị méo hay mờ hình */
+    cursor: pointer;    /* Biến con trỏ chuột thành hình bàn tay để biết click được */
+}
+
+.shop-now-btn:hover {
+    transform: scale(1.05); /* Di chuột vào nút phóng to nhẹ */
+}
+/* INTRO */
+.intro{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.intro h2{
+    margin-bottom:20px;
+}
+
+/* FEATURES */
+.features{
+    padding:80px;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:250px;
+
+    border:1px solid #ccc;
+
+    text-decoration:none;
+    color:black;
+}
+
+/* MAIN SECTION */
+.main-section{
+    padding:80px;
+}
+
+.main-section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:80px 20px;
+}
