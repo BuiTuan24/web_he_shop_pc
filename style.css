@@ -1,26 +1,26 @@
 *{
-    margin:10px 0;
+    margin: 0;
     padding:0;
     box-sizing:border-box;
 }
 
 body{
     font-family:Arial,sans-serif;
+    background:#fafafa;
 }
 
 /* TOP BAR */
 .top-bar{
-    background:#c74e1f;
-    color:white;
-    padding:8px 20px;
-
+    background:#4291f8;
     display:flex;
+    padding:25px 40px;
     justify-content:space-between;
     align-items:center;
+    margin-bottom:-10px;
 }
 
 .top-bar a{
-    color:white;
+    color:rgb(0, 0, 0);
     text-decoration:none;
     margin-right:75px;
     font-size:20px;
@@ -30,9 +30,15 @@ body{
     margin-right:50px;
     margin-left:20px;
 }
+
+.top-bar a:hover{
+    color:rgb(255, 255, 255);
+}
+
+
 /* MAIN HEADER */
 .main-header{
-    background:white;
+    background:#ffffff;
     padding:20px 40px;
 
     display:flex;
@@ -40,10 +46,16 @@ body{
     align-items:center;
 }
 
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#ff7a00;
+.logo img{
+    width: 400px;
+    height: 150px;
+    margin-top:-10px;
+    margin-left:-10px;
+    margin-right:30px;
+    border-radius:50px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(10, 155, 238);
 }
 
 .search-box{
@@ -57,7 +69,7 @@ body{
 .search-box input{
     flex:1;
     padding:20px;
-    border:1px solid #ddd;
+    border:1px solid #000000;
     border-radius:30px 0 0 30px;
     outline:none;
 }
@@ -65,10 +77,14 @@ body{
 .search-box button{
     padding:0 25px;
     border:none;
-    background:#ff7a00;
+    background:#000000;
     color:white;
     border-radius:0 30px 30px 0;
     cursor:pointer;
+}
+
+.search-box button:hover{
+    background:#4291f8;
 }
 
 .header-actions{
@@ -76,20 +92,31 @@ body{
     gap:30px;
     
 }
+
 .header-actions a{
-    color:rgb(241, 119, 4);
+    color:rgb(0, 0, 0);
     font-size:25px;
+    border-radius:30%;
+    padding:20px;
+    background:rgb(0, 132, 255);
+}
+
+.header-actions a:hover{
+    color:rgb(255, 255, 255);
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #00ffff,
+        0 0 35px #0088ff;
 }
 
 
 .category-menu {
-    background: #fc6705;
-
+    background: #4291f8;
     display: flex;
     justify-content: center;
     gap: 50px;
-
-    padding: 18px;
+    padding: 15px;
+    margin-bottom: -5px;
 }
 
 .category-menu a,
@@ -103,11 +130,6 @@ body{
 .nav {
     display: flex;
     gap: 30px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: rgb(241, 15, 15);
 }
 
 /* --- ĐOẠN CSS DROPDOWN MỚI (CHỐNG TRƯỢT CHUỘT) --- */
@@ -132,10 +154,9 @@ body{
     background-color: #ffffff; 
     min-width: 240px;          
     border: 1px solid #e0e0e0;
-    box-shadow: 0px 4px 12px rgba(235, 147, 33, 0.938); 
+    box-shadow: 0px 4px 12px rgba(17, 0, 255, 0.938); 
     border-radius: 6px;
     
-   
     padding: 10px 0;            
     margin-top: 20px;           
 }
@@ -161,8 +182,8 @@ body{
 }
 
 .category-menu .dropdown-content-inner a:hover {
-    background-color: #f5f5f5; 
-    color: #fc6705 !important; 
+    background-color: #ffffff; 
+    color: #3c6df1 !important; 
 }
 
 /* Kích hoạt hành động hiển thị menu khi rê chuột */
@@ -173,7 +194,6 @@ body{
 
 /* HERO */
 .hero{
-    height: 500px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -181,13 +201,13 @@ body{
 
 .hero-content{
     text-align:center;
+    width:100%;
+    margin-top:-25px;
+    background:rgba(255, 255, 255, 0.8);
+    border-radius:50px;
+    border: none;
 }
 
-.hero-content h1{
-    font-size:80px;
-    margin-bottom:30px;
-    color:#ff7a00;
-}
 
 .hero-buttons{
     display:flex;
@@ -195,16 +215,38 @@ body{
     gap:20px;
 }
 
-.hero-buttons button{
-    padding:15px 30px;
+.hero-buttons a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    transition: transform .3s;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 0 8px #00ffff,
+        0 0 18px #00ffff,
+        0 0 35px #0088ff;
+    border: 2px solid #00ffff;
+}
+
+
+.hero-buttons img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-banner {
     position: relative; /* Làm mốc định vị cho các slide con chồng lên nhau */
     width: 100%;
-    height: 700px;      /* Độ cao của banner, bạn có thể tự chỉnh lại cho vừa mắt */
-    
-    background-color: #f0f0f0; /* Nền xám nhẹ dự phòng khi ảnh đang tải */
+    height: 700px;/* Độ cao của banner, bạn có thể tự chỉnh lại cho vừa mắt */
+    margin-bottom: 50px; /* Khoảng cách với các phần nội dung bên dưới */
+    margin-top: 5px; /* Khoảng cách với phần header bên trên */
+    background-color: #1789e6; /* Nền xám nhẹ dự phòng khi ảnh đang tải */
 }
 
 /* 2. Định dạng cho từng slide ảnh - ÉP CHÚNG CHỒNG LÊN NHAU */
