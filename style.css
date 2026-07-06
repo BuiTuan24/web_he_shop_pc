@@ -11,7 +11,7 @@ body {
 
 /* TOP BAR */
 .top-bar {
-    background: #5f9dee;
+    background: rgb(245, 125, 12);
     display: flex;
     padding: 25px 40px;
     justify-content: space-between;
@@ -34,7 +34,7 @@ body {
 .top-right a:hover {
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
-    background: rgb(56, 100, 245);
+    background: rgb(243, 157, 77);
     padding: 4px 8px;
     border-radius: 20px;
 }
@@ -42,7 +42,7 @@ body {
 .top-left a:hover {
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
-    background: rgb(56, 100, 245);
+    background: rgb(243, 157, 77);
     padding: 4px 8px;
     border-radius: 20px;
 }
@@ -70,7 +70,7 @@ body {
     border-radius: 50px;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgb(10, 155, 238);
+    box-shadow: 0 4px 12px rgb(245, 125, 12);
 }
 
 .search-box {
@@ -99,7 +99,7 @@ body {
 }
 
 .search-box button:hover {
-    background: #4291f8;
+    background: rgb(245, 125, 12);
 }
 
 .header-actions {
@@ -113,23 +113,23 @@ body {
     font-size: 25px;
     border-radius: 30%;
     padding: 20px;
-    background: rgb(0, 132, 255);
+    background: rgb(245, 125, 12);
 }
 
 .header-actions a:hover {
     color: rgb(255, 255, 255);
     box-shadow:
-        0 0 8px #00ffff,
-        0 0 18px #00ffff,
-        0 0 35px #0088ff;
+        0 0 8px #ff7300,
+        0 0 18px #eba40d,
+        0 0 35px #e68d19;
 }
 
 
 .category-menu {
-    background: #4291f8;
+    background: rgb(245, 125, 12);
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 250px;
     padding: 15px;
     margin-bottom: -5px;
 }
@@ -139,7 +139,7 @@ body {
     color: rgb(248, 248, 248);
     text-decoration: none;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .nav {
@@ -166,10 +166,10 @@ body {
 
 
 .category-menu .dropdown-content-inner {
-    background-color: #49a2f5;
+    background-color: #eca711;
     min-width: 240px;
     border: 1px solid #e0e0e0;
-    box-shadow: 0px 4px 12px rgba(17, 0, 255, 0.938);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.938);
     border-radius: 6px;
 
     padding: 10px 0;
@@ -198,8 +198,8 @@ body {
 }
 
 .category-menu .dropdown-content-inner a:hover {
-    background-color: #000000;
-    /* color: #3c6df1 !important;  */
+    background-color: #694e02;
+    
 }
 
 /* Kích hoạt hành động hiển thị menu khi rê chuột */
@@ -217,7 +217,7 @@ body {
 
 .hero-content {
     text-align: center;
-    width: 100%;
+    width: 105%;
     margin-top: -25px;
     background: rgb(212, 209, 209);
 
@@ -227,7 +227,7 @@ body {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 80px;
 }
 
 .hero-buttons a {
@@ -241,10 +241,10 @@ body {
 .hero-buttons a:hover {
     transform: translateY(-10px);
     box-shadow:
-        0 0 8px #00ffff,
-        0 0 18px #00ffff,
-        0 0 35px #0088ff;
-    border: 2px solid #00ffff;
+        0 0 8px #ffc400,
+        0 0 18px #ffa600,
+        0 0 35px #e9ca41;
+    border: 2px solid #f1e183;
 }
 
 
@@ -259,13 +259,13 @@ body {
     position: relative;
     /* Làm mốc định vị cho các slide con chồng lên nhau */
     width: 100%;
-    height: 700px;
+    height: 800px;
     /* Độ cao của banner, bạn có thể tự chỉnh lại cho vừa mắt */
     margin-bottom: 50px;
     /* Khoảng cách với các phần nội dung bên dưới */
     margin-top: 5px;
     /* Khoảng cách với phần header bên trên */
-    background-color: #1789e6;
+    background-color: #edeef0;
     /* Nền xám nhẹ dự phòng khi ảnh đang tải */
 }
 
