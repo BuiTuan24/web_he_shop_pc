@@ -153,6 +153,10 @@ body {
     display: inline-block;
 }
 
+.category-menu .dropdown .dropdown-btn {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 .category-menu .dropdown-content {
     display: none;
@@ -192,14 +196,14 @@ body {
     color: #ffffff !important;
     padding: 12px 25px;
     display: block;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
 }
 
 .category-menu .dropdown-content-inner a:hover {
     background-color: #694e02;
-    
+
 }
 
 /* Kích hoạt hành động hiển thị menu khi rê chuột */
@@ -228,6 +232,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 80px;
+    margin-top: 18px;
 }
 
 .hero-buttons a {
@@ -239,7 +244,7 @@ body {
 }
 
 .hero-buttons a:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     box-shadow:
         0 0 8px #ffc400,
         0 0 18px #ffa600,
@@ -534,12 +539,10 @@ body {
 }
 
 .news {
-    /* max-width:100%; */
+
     margin: 120px auto;
     padding: 20px;
     height: 200px;
-    /* border:1px solid #000;
-    border-radius:30px; */
     background: #d3d6d6;
 }
 
@@ -548,7 +551,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 350px;
-    /* Khoảng cách giữa các span */
+
 }
 
 .news-title {
@@ -567,7 +570,7 @@ body {
 
     font-size: 18px;
     gap: 8px;
-    /* Khoảng cách giữa chữ và icon */
+
 }
 
 .news-title i {
@@ -576,9 +579,465 @@ body {
 }
 
 /* FOOTER */
+/* Layout tổng thể Footer chia 2 cột */
 .footer {
-    max-width: 100%px;
-    background: #bd1c1c;
+    background-color: #f1b361;
+    color: #030405;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.footer-about h2 {
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-desc {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #000000;
+    font-size: 25px;
+}
+
+.author-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.author-info li {
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.author-info a {
+    color: #f3efef;
+    text-decoration: none;
+}
+
+.author-info a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 20px;
+    color: #f1f3f5;
+    margin-top: 15px;
+}
+
+
+.footer-feedback h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.footer-feedback input,
+.footer-feedback textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    background-color: #2d3748;
+    color: #f8f6f6;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.footer-feedback input:focus,
+.footer-feedback textarea:focus {
+    border-color: #faf7f7;
+}
+
+.footer-feedback textarea {
+    resize: vertical;
+}
+
+/* Kiểu hiển thị thông báo lỗi */
+.error-msg {
+    color: rgb(14, 4, 4);
+    font-size: 15px;
+    display: block;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.footer-feedback input.invalid,
+.footer-feedback textarea.invalid {
+    border-color: #e53e3e;
+}
+
+.footer-feedback button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.footer-feedback button:hover {
+    background-color: #eebf3d;
+}
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.auth-container {
+
+    width: 950px;
+    max-width: 100%;
+
+    min-height: 620px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+
+    position: relative;
+
+    animation: authShow .3s ease;
+}
+
+@keyframes authShow {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px) scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+.close-auth {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 18px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    color: #555;
+
+    transition: .25s;
+}
+
+.close-auth:hover {
+
+    color: #ff6b00;
+
+}
+
+.auth-left {
+
+    width: 40%;
+
+    background: linear-gradient(180deg, #ff8c1a, #ff6b00);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
     text-align: center;
-    padding: 80px 20px;
+
+    padding: 40px;
+}
+
+.auth-left img {
+
+    width: 110px;
+
+    margin-bottom: 25px;
+
+}
+
+.auth-left h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+.auth-left p {
+
+    line-height: 1.7;
+
+    opacity: .95;
+
+}
+
+.auth-right {
+
+    width: 60%;
+
+    padding: 60px;
+}
+
+.auth-right h2 {
+
+    font-size: 32px;
+
+    color: #222;
+
+    margin-bottom: 10px;
+}
+
+.auth-right p {
+
+    color: #666;
+
+    margin-bottom: 28px;
+}
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #222;
+
+    font-weight: 600;
+
+}
+
+.form-group input {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    transition: .25s;
+
+    font-size: 15px;
+}
+
+.form-group input:focus {
+
+    border-color: #ff6b00;
+
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, .12);
+
+}
+
+.password-box {
+
+    position: relative;
+
+}
+
+.password-box input {
+
+    padding-right: 45px;
+
+}
+
+.toggle-password {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+.remember {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 18px 0 25px;
+}
+
+.remember a {
+
+    color: #ff6b00;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.auth-right button {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff6b00;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.auth-right button:hover {
+
+    background: #e65d00;
+
+}
+
+.switch {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+}
+
+.switch span {
+
+    color: #ff6b00;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.switch span:hover {
+
+    text-decoration: underline;
+
+}
+
+.form-group small {
+
+    color: #e53935;
+
+    display: block;
+
+    margin-top: 6px;
+
+    min-height: 18px;
+
+    font-size: 13px;
+}
+
+
+@media(max-width:900px) {
+
+    .auth-container {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .auth-left {
+
+        width: 100%;
+
+        padding: 35px;
+
+    }
+
+    .auth-right {
+
+        width: 100%;
+
+        padding: 35px;
+
+    }
+
 }
