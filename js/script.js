@@ -1,16 +1,26 @@
+function initBanner() {
 
-const slides = document.querySelectorAll(".hero-banner-slide");
-let currentSlide = 0;
+    const slides = document.querySelectorAll(".hero-banner-slide");
 
-function nextBanner() {
-  if (slides.length === 0) return;
+    if (slides.length === 0) {
+        return;
+    }
 
-  slides[currentSlide].classList.remove("active");
+    let currentSlide = 0;
 
-  currentSlide = (currentSlide + 1) % slides.length;
+    function nextBanner() {
 
-  slides[currentSlide].classList.add("active");
+        slides[currentSlide].classList.remove("active");
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.add("active");
+    }
+
+    setInterval(nextBanner, 3000);
 }
+
+
 
 function initFeedback(){ 
   const form = document.getElementById("feedbackForm");

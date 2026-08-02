@@ -89,3 +89,6 @@ if(typeof initContact==="function"){
     initContact();
 
 }
+if (typeof initBanner === "function") {
+    initBanner();
+}

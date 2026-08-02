@@ -13,7 +13,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/ngu van 7.png",
 
     seller:"Nguyễn Văn A",
 
@@ -40,7 +40,7 @@ const products = [
 
     price:"8.000.000đ",
 
-    image:"image/laptop.jpg",
+    image:"../image/dell cu.png",
 
     seller:"Trần Minh",
 
@@ -66,7 +66,7 @@ const products = [
 
     price:"Trao đổi xe",
 
-    image:"image/bike.jpg",
+    image:"../image/honda cu.png",
 
     seller:"Lê Tuấn",
 
@@ -91,7 +91,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/li 12.png",
 
     seller:"Nguyễn Văn A",
 
@@ -117,7 +117,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/van 12.png",
 
     seller:"Nguyễn Văn A",
 
@@ -143,7 +143,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/xe dap cu.png",
 
     seller:"Nguyễn Văn A",
 
@@ -169,7 +169,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/xe dien.png",
 
     seller:"Nguyễn Văn A",
 
@@ -195,7 +195,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/ghe ban go.png",
 
     seller:"Nguyễn Văn A",
 
@@ -221,7 +221,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/TV.png",
 
     seller:"Nguyễn Văn A",
 
@@ -247,7 +247,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/giuong ngu cu.png",
 
     seller:"Nguyễn Văn A",
 
@@ -273,7 +273,7 @@ const products = [
 
     price:"Có thể trao đổi",
 
-    image:"image/book1.jpg",
+    image:"../image/ao.png",
 
     seller:"Nguyễn Văn A",
 
