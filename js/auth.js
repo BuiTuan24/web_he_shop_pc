@@ -66,9 +66,6 @@ function initAuth() {
     loginForm.style.display = "block";
   });
 
-  //==============================
-  // HIỆN / ẨN PASSWORD
-  //==============================
 
   document.querySelectorAll(".toggle-password").forEach((icon) => {
     icon.addEventListener("click", () => {
@@ -88,17 +85,11 @@ function initAuth() {
     });
   });
 
-  //==============================
-  // REGEX
-  //==============================
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const phoneRegex = /^(0)\d{8}$/;
 
-  //==============================
-  // HÀM LỖI
-  //==============================
 
   function error(id, msg) {
     document.getElementById(id).textContent = msg;
@@ -108,9 +99,6 @@ function initAuth() {
     document.getElementById(id).textContent = "";
   }
 
-  //==============================
-  // LOGIN
-  //==============================
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -263,3 +251,41 @@ function updateUserUI() {
     userArea.style.display = "none";
   }
 }
+
+function initHeader() {
+
+    const input = document.getElementById("searchInput");
+    const button = document.getElementById("searchButton");
+
+    if (!input || !button) {
+        return;
+    }
+
+    function searchProduct() {
+
+        const keyword = input.value.trim();
+
+        if (keyword === "") {
+            return;
+        }
+
+        window.location.href =
+    "../component/product-list.html?search=" +
+    encodeURIComponent(keyword);
+
+    }
+
+    button.addEventListener("click", searchProduct);
+
+    input.addEventListener("keydown", function (e) {
+
+        if (e.key === "Enter") {
+
+            searchProduct();
+
+        }
+
+    });
+
+}
+

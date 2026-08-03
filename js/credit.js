@@ -27,7 +27,7 @@ let auto;
 
 function startAuto() {
   clearInterval(auto);
-  auto = setInterval(nextSlide, 1000);
+  auto = setInterval(nextSlide, 2000);
 }
 
 function stopAuto() {

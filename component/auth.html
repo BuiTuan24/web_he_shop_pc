@@ -1,189 +1,188 @@
-<!-- =================== AUTH MODAL =================== -->
-    <div class="auth-overlay" id="authOverlay">
+<div class="auth-overlay" id="authOverlay">
 
-        <div class="auth-container">
+    <div class="auth-container">
 
-            <button type="button" class="close-auth" id="btnCloseAuth">
-                <i class="bi bi-x-lg"></i>
-            </button>
+        <button type="button" class="close-auth" id="btnCloseAuth">
+            <i class="bi bi-x-lg"></i>
+        </button>
 
-            <!-- LEFT -->
-            <div class="auth-left">
 
-                <h2>TRAO ĐỔI ĐỒ CŨ</h2>
+        <div class="auth-left">
 
-                <p>
-                    Đăng nhập để mua bán, trao đổi
-                    đồ cũ nhanh chóng và an toàn.
+            <h2>TRAO ĐỔI ĐỒ CŨ</h2>
+
+            <p>
+                Đăng nhập để mua bán, trao đổi
+                đồ cũ nhanh chóng và an toàn.
+            </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="auth-right">
+
+
+
+            <form id="loginForm">
+
+                <h2>Đăng nhập</h2>
+
+                <div class="form-group">
+
+                    <label>Email hoặc số điện thoại</label>
+
+                    <input type="text" id="loginAccount" placeholder="Nhập email hoặc số điện thoại">
+
+                    <small id="loginAccountError"></small>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Mật khẩu</label>
+
+                    <div class="password-box">
+
+                        <input type="password" id="loginPassword" placeholder="Nhập mật khẩu">
+
+                        <i class="bi bi-eye-slash toggle-password" data-target="loginPassword">
+                        </i>
+
+                    </div>
+
+                    <small id="loginPasswordError"></small>
+
+                </div>
+
+                <div class="remember">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Ghi nhớ đăng nhập
+
+                    </label>
+
+                    <a href="#">
+
+                        Quên mật khẩu?
+
+                    </a>
+
+                </div>
+
+                <button type="submit" class="auth-btn">
+
+                    Đăng nhập
+
+                </button>
+
+                <p class="switch">
+
+                    Chưa có tài khoản?
+
+                    <span id="btnShowRegister">
+
+                        Đăng ký ngay
+
+                    </span>
+
                 </p>
 
-            </div>
+            </form>
 
-            <!-- RIGHT -->
-            <div class="auth-right">
 
-                <!-- ================= LOGIN ================= -->
 
-                <form id="loginForm">
+            <form id="registerForm" style="display:none;">
 
-                    <h2>Đăng nhập</h2>
+                <h2>Đăng ký</h2>
 
-                    <div class="form-group">
+                <div class="form-group">
 
-                        <label>Email hoặc số điện thoại</label>
+                    <label>Họ và tên</label>
 
-                        <input type="text" id="loginAccount" placeholder="Nhập email hoặc số điện thoại">
+                    <input type="text" id="registerFullName" placeholder="Nguyễn Văn A">
 
-                        <small id="loginAccountError"></small>
+                    <small id="registerNameError"></small>
 
-                    </div>
+                </div>
 
-                    <div class="form-group">
+                <div class="form-group">
 
-                        <label>Mật khẩu</label>
+                    <label>Email</label>
 
-                        <div class="password-box">
+                    <input type="email" id="registerEmail" placeholder="example@gmail.com">
 
-                            <input type="password" id="loginPassword" placeholder="Nhập mật khẩu">
+                    <small id="registerEmailError"></small>
 
-                            <i class="bi bi-eye-slash toggle-password" data-target="loginPassword">
-                            </i>
+                </div>
 
-                        </div>
+                <div class="form-group">
 
-                        <small id="loginPasswordError"></small>
+                    <label>Số điện thoại</label>
 
-                    </div>
+                    <input type="text" id="registerPhone" placeholder="09xxxxxxxx">
 
-                    <div class="remember">
+                    <small id="registerPhoneError"></small>
 
-                        <label>
+                </div>
+                <div class="form-group">
 
-                            <input type="checkbox">
+                    <label>Mật khẩu</label>
 
-                            Ghi nhớ đăng nhập
+                    <div class="password-box">
 
-                        </label>
+                        <input type="password" id="registerPassword" placeholder="Nhập mật khẩu">
 
-                        <a href="#">
-
-                            Quên mật khẩu?
-
-                        </a>
+                        <i class="bi bi-eye-slash toggle-password" data-target="registerPassword">
+                        </i>
 
                     </div>
 
-                    <button type="submit" class="auth-btn">
+                    <small id="registerPasswordError"></small>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Xác nhận mật khẩu</label>
+
+                    <div class="password-box">
+
+                        <input type="password" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu">
+
+                        <i class="bi bi-eye-slash toggle-password" data-target="registerConfirmPassword">
+                        </i>
+
+                    </div>
+
+                    <small id="registerConfirmError"></small>
+
+                </div>
+
+                <button type="submit" class="auth-btn">
+
+                    Đăng ký
+
+                </button>
+
+                <p class="switch">
+
+                    Đã có tài khoản?
+
+                    <span id="btnShowLogin">
 
                         Đăng nhập
 
-                    </button>
+                    </span>
 
-                    <p class="switch">
+                </p>
 
-                        Chưa có tài khoản?
-
-                        <span id="btnShowRegister">
-
-                            Đăng ký ngay
-
-                        </span>
-
-                    </p>
-
-                </form>
-
-                <!-- ================= REGISTER ================= -->
-
-                <form id="registerForm" style="display:none;">
-
-                    <h2>Đăng ký</h2>
-
-                    <div class="form-group">
-
-                        <label>Họ và tên</label>
-
-                        <input type="text" id="registerFullName" placeholder="Nguyễn Văn A">
-
-                        <small id="registerNameError"></small>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Email</label>
-
-                        <input type="email" id="registerEmail" placeholder="example@gmail.com">
-
-                        <small id="registerEmailError"></small>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Số điện thoại</label>
-
-                        <input type="text" id="registerPhone" placeholder="09xxxxxxxx">
-
-                        <small id="registerPhoneError"></small>
-
-                    </div>
-                    <div class="form-group">
-
-                        <label>Mật khẩu</label>
-
-                        <div class="password-box">
-
-                            <input type="password" id="registerPassword" placeholder="Nhập mật khẩu">
-
-                            <i class="bi bi-eye-slash toggle-password" data-target="registerPassword">
-                            </i>
-
-                        </div>
-
-                        <small id="registerPasswordError"></small>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Xác nhận mật khẩu</label>
-
-                        <div class="password-box">
-
-                            <input type="password" id="registerConfirmPassword" placeholder="Nhập lại mật khẩu">
-
-                            <i class="bi bi-eye-slash toggle-password" data-target="registerConfirmPassword">
-                            </i>
-
-                        </div>
-
-                        <small id="registerConfirmError"></small>
-
-                    </div>
-
-                    <button type="submit" class="auth-btn">
-
-                        Đăng ký
-
-                    </button>
-
-                    <p class="switch">
-
-                        Đã có tài khoản?
-
-                        <span id="btnShowLogin">
-
-                            Đăng nhập
-
-                        </span>
-
-                    </p>
-
-                </form>
-
-            </div>
+            </form>
 
         </div>
 
     </div>
+
+</div>

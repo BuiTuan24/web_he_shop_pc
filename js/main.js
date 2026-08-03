@@ -24,6 +24,9 @@ loadComponent("header", "../component/header.html", () => {
   if (typeof updateUserUI === "function") {
     updateUserUI();
   }
+  if (typeof initHeader === "function") {
+        initHeader();
+    }
 
   const logout = document.getElementById("btnLogout");
 

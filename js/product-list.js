@@ -83,29 +83,58 @@ function initProductList() {
     window.location.href = "product-detail.html?id=" + id;
   };
 
-  // ===== LỌC TỪ MENU HEADER =====
 
   const filter = getFilterFromURL();
 
-  let data = products;
+let data = products;
 
-  if (filter.category) {
-    data = data.filter((item) => item.category === filter.category);
-  }
+if (filter.category) {
 
-  if (filter.sub) {
-    data = data.filter((item) => item.subCategory === filter.sub);
-  }
+    data = data.filter(item =>
+        item.category === filter.category
+    );
 
-  renderProducts(data);
+}
+
+if (filter.sub) {
+
+    data = data.filter(item =>
+        item.subCategory === filter.sub
+    );
+
+}
+
+if (filter.search) {
+
+    const keyword = filter.search.toLowerCase();
+
+    data = data.filter(item =>
+
+        item.name.toLowerCase().includes(keyword) ||
+
+        item.category.toLowerCase().includes(keyword) ||
+
+        item.subCategory.toLowerCase().includes(keyword)
+
+    );
+
+}
+
+renderProducts(data);
 }
 
 function getFilterFromURL() {
-  const params = new URLSearchParams(window.location.search);
 
-  return {
-    category: params.get("category"),
+    const params = new URLSearchParams(window.location.search);
 
-    sub: params.get("sub"),
-  };
+    return {
+
+        category: params.get("category"),
+
+        sub: params.get("sub"),
+
+        search: params.get("search")
+
+    };
+
 }

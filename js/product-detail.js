@@ -36,10 +36,6 @@ function initProductDetail() {
   document.getElementById("productDescription").textContent =
     product.description;
 
-  // ======================
-  // XỬ LÝ NÚT MUA / TRAO ĐỔI
-  // ======================
-
   const buyButton = document.getElementById("buyButton");
 
   const exchangeButton = document.getElementById("exchangeButton");
@@ -59,142 +55,58 @@ function initProductDetail() {
   }
 }
 
-function initContact(){
+function initContact() {
+  const buy = document.getElementById("buyButton");
 
+  const exchange = document.getElementById("exchangeButton");
 
+  const overlay = document.getElementById("contactOverlay");
 
-const buy =
-document.getElementById("buyButton");
+  const close = document.getElementById("closeContact");
 
+  const title = document.getElementById("contactTitle");
 
-const exchange =
-document.getElementById("exchangeButton");
+  const name = document.getElementById("buyerName");
 
+  const phone = document.getElementById("buyerPhone");
 
-const overlay =
-document.getElementById("contactOverlay");
+  const product = document.getElementById("contactProduct");
 
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
-const close =
-document.getElementById("closeContact");
+  if (user) {
+    name.value = user.fullname;
 
+    phone.value = user.phone;
+  }
 
-const title =
-document.getElementById("contactTitle");
+  function open(type) {
+    overlay.style.display = "flex";
 
+    title.innerText = type;
 
-const name =
-document.getElementById("buyerName");
+    product.value = document.getElementById("productName").innerText;
+  }
 
+  if (buy) {
+    buy.onclick = () => {
+      open("Mua sản phẩm");
+    };
+  }
 
-const phone =
-document.getElementById("buyerPhone");
+  if (exchange) {
+    exchange.onclick = () => {
+      open("Yêu cầu trao đổi");
+    };
+  }
 
+  close.onclick = () => {
+    overlay.style.display = "none";
+  };
 
-const product =
-document.getElementById("contactProduct");
+  document.getElementById("sendRequest").onclick = () => {
+    alert("Đã gửi yêu cầu thành công!");
 
-
-
-const user =
-JSON.parse(
-localStorage.getItem("currentUser")
-);
-
-
-
-if(user){
-
-name.value =
-user.fullname;
-
-
-phone.value =
-user.phone;
-
-}
-
-
-
-function open(type){
-
-
-overlay.style.display="flex";
-
-
-title.innerText =
-type;
-
-
-
-product.value =
-document.getElementById(
-"productName"
-).innerText;
-
-
-}
-
-
-
-
-if(buy){
-
-
-buy.onclick=()=>{
-
-open(
-"Mua sản phẩm"
-);
-
-};
-
-}
-
-
-
-if(exchange){
-
-
-exchange.onclick=()=>{
-
-open(
-"Yêu cầu trao đổi"
-);
-
-};
-
-}
-
-
-
-close.onclick=()=>{
-
-
-overlay.style.display="none";
-
-
-};
-
-
-
-
-document.getElementById(
-"sendRequest"
-)
-.onclick=()=>{
-
-
-alert(
-"Đã gửi yêu cầu thành công!"
-);
-
-
-overlay.style.display="none";
-
-
-};
-
-
-
+    overlay.style.display = "none";
+  };
 }

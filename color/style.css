@@ -9,7 +9,6 @@ body {
     background: #fafafa;
 }
 
-/* TOP BAR */
 .top-bar {
     background: rgb(245, 125, 12);
     display: flex;
@@ -212,7 +211,7 @@ body {
 }
 
 
-/* HERO */
+
 .hero {
     display: flex;
     justify-content: center;
@@ -262,43 +261,42 @@ body {
 
 .hero-banner {
     position: relative;
-    /* Làm mốc định vị cho các slide con chồng lên nhau */
+    
     width: 100%;
     height: 800px;
-    /* Độ cao của banner, bạn có thể tự chỉnh lại cho vừa mắt */
+    
     margin-bottom: 50px;
-    /* Khoảng cách với các phần nội dung bên dưới */
+    
     margin-top: 5px;
-    /* Khoảng cách với phần header bên trên */
     background-color: #edeef0;
-    /* Nền xám nhẹ dự phòng khi ảnh đang tải */
+    
 }
 
-/* 2. Định dạng cho từng slide ảnh - ÉP CHÚNG CHỒNG LÊN NHAU */
+
 .hero-banner-slide {
     position: absolute;
-    /* Ép tất cả các slide nằm đè lên cùng 1 tọa độ */
+    
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    /* Mặc định ẨN tất cả các ảnh đi */
+    
     transition: opacity 0.8s ease-in-out;
-    /* Tạo hiệu ứng mờ dần khi đổi ảnh rất mượt */
+    
     z-index: 1;
-    /* Nằm ở lớp dưới */
+    
 }
 
-/* 3. Slide nào có class .active (do JS kích hoạt) thì hiện lên rõ nét */
+
 .hero-banner-slide.active {
     opacity: 1;
-    /* HIỆN ảnh rõ nét */
+    
     z-index: 2;
-    /* Đẩy lên lớp trên để người dùng nhìn thấy */
+    
 }
 
-/* 4. Định dạng cho thẻ a và thẻ img bên trong slide */
+
 .hero-banner-slide a {
     display: block;
     width: 100%;
@@ -309,17 +307,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Giúp ảnh tự co giãn đầy khung mà không bị méo hay mờ hình */
+    
     cursor: pointer;
-    /* Biến con trỏ chuột thành hình bàn tay để biết click được */
+    
 }
 
 .shop-now-btn:hover {
     transform: scale(1.05);
-    /* Di chuột vào nút phóng to nhẹ */
+    
 }
 
-/* FLASH SALE */
 .flash-sale {
     max-width: 1200px;
     margin: auto;
@@ -578,8 +575,7 @@ body {
     color: #b95555;
 }
 
-/* FOOTER */
-/* Layout tổng thể Footer chia 2 cột */
+
 .footer {
     background-color: #f1b361;
     color: #030405;
@@ -678,7 +674,7 @@ body {
     resize: vertical;
 }
 
-/* Kiểu hiển thị thông báo lỗi */
+
 .error-msg {
     color: rgb(14, 4, 4);
     font-size: 15px;

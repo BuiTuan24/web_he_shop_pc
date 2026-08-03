@@ -17,7 +17,7 @@ function initBanner() {
         slides[currentSlide].classList.add("active");
     }
 
-    setInterval(nextBanner, 3000);
+    setInterval(nextBanner, 2000);
 }
 
 
@@ -118,4 +118,3 @@ function initFeedback(){
     }
   });
 }
-

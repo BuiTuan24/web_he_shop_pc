@@ -75,9 +75,17 @@
         </div>
 
         <div class="search-box">
-            <input type="text" placeholder="Nhập từ khóa cần tìm">
-            <button><i class="bi bi-search"></i></button>
-        </div>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Nhập tên sản phẩm">
+
+    <button id="searchButton">
+        <i class="bi bi-search"></i>
+    </button>
+
+</div>
 
         <div class="header-actions">
             <a href="#"><i class="bi bi-telephone"></i> Hotline</a>
@@ -87,61 +95,163 @@
     </div>
 
     <nav class="category-menu">
-        <!-- 1. Laptop -->
-        <div class="dropdown">
-            <a href="../component/product-list.html?category=Sách&sub=Sách cấp 2" class="dropdown-btn"><i class="bi bi-book"></i> Trao đổi sách </a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <a href="#">Sách cấp 2</a>
-                    <a href="#">Sách cấp 3</a>
-                </div>
+
+    <!-- SÁCH -->
+    <div class="dropdown">
+
+        <a href="../component/product-list.html?category=Sách"
+            class="dropdown-btn">
+
+            <i class="bi bi-book"></i>
+            Trao đổi sách
+
+        </a>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-content-inner">
+
+                <a href="../component/product-list.html?category=Sách&sub=Sách cấp 2">
+                    Sách cấp 2
+                </a>
+
+                <a href="../component/product-list.html?category=Sách&sub=Sách cấp 3">
+                    Sách cấp 3
+                </a>
+
             </div>
+
         </div>
 
-        <!-- 2. Phần Mềm -->
-        <div class="dropdown">
-            <a href="#" class="dropdown-btn"><i class="bi bi-car-front"></i> Trao đổi xe</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <a href="#">Xe máy</a>
-                    <a href="#">xe đạp</a>
-                    <a href="#">xe điện</a>
-                </div>
+    </div>
+
+
+    <!-- XE -->
+    <div class="dropdown">
+
+        <a href="../component/product-list.html?category=Xe"
+            class="dropdown-btn">
+
+            <i class="bi bi-car-front"></i>
+            Trao đổi xe
+
+        </a>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-content-inner">
+
+                <a href="../component/product-list.html?category=Xe&sub=Xe máy">
+                    Xe máy
+                </a>
+
+                <a href="../component/product-list.html?category=Xe&sub=Xe đạp">
+                    Xe đạp
+                </a>
+
+                <a href="../component/product-list.html?category=Xe&sub=Xe điện">
+                    Xe điện
+                </a>
+
             </div>
+
         </div>
 
-        <!-- 3. MAIN -->
-        <div class="dropdown">
-            <a href="#" class="dropdown-btn"><i class="bi bi-house"></i> Trao đổi nội thất nhà ở</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <a href="#">Ghế bàn gỗ</a>
-                    <a href="#">Tivi</a>
-                    <a href="#">Giường ngủ</a>
-                </div>
+    </div>
+
+
+    <!-- NỘI THẤT -->
+    <div class="dropdown">
+
+        <a href="../component/product-list.html?category=Nội thất"
+            class="dropdown-btn">
+
+            <i class="bi bi-house"></i>
+            Trao đổi nội thất
+
+        </a>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-content-inner">
+
+                <a href="../component/product-list.html?category=Nội thất&sub=Ghế bàn gỗ">
+                    Ghế bàn gỗ
+                </a>
+
+                <a href="../component/product-list.html?category=Đồ điện tử&sub=Tivi">
+                    Tivi
+                </a>
+
+                <a href="../component/product-list.html?category=Nội thất&sub=Giường ngủ">
+                    Giường ngủ
+                </a>
+
             </div>
+
         </div>
 
-        <!-- 4. CPU -->
-        <div class="dropdown">
-            <a href="#" class="dropdown-btn"><i class="bi bi-laptop"></i> Trao đổi đồ điện tử</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <a href="#">Laptop</a>
-                    <a href="#">Điện thoại</a>
-                </div>
+    </div>
+
+
+    <!-- ĐỒ ĐIỆN TỬ -->
+    <div class="dropdown">
+
+        <a href="../component/product-list.html?category=Đồ điện tử"
+            class="dropdown-btn">
+
+            <i class="bi bi-laptop"></i>
+            Trao đổi đồ điện tử
+
+        </a>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-content-inner">
+
+                <a href="../component/product-list.html?category=Đồ điện tử&sub=Laptop">
+                    Laptop
+                </a>
+
+                <a href="../component/product-list.html?category=Đồ điện tử&sub=Điện thoại">
+                    Điện thoại
+                </a>
+
             </div>
+
         </div>
 
-        <!-- 5. RAM -->
-        <div class="dropdown">
-            <a href="#" class="dropdown-btn"><i class="bi bi-incognito"></i> Trao đổi quần áo</a>
-            <div class="dropdown-content">
-                <div class="dropdown-content-inner">
-                    <a href="#">Áo</a>
-                    <a href="#">Quần</a>
-                </div>
+    </div>
+
+
+    <!-- QUẦN ÁO -->
+    <div class="dropdown">
+
+        <a href="../component/product-list.html?category=Quần áo"
+            class="dropdown-btn">
+
+            <i class="bi bi-incognito"></i>
+            Trao đổi quần áo
+
+        </a>
+
+        <div class="dropdown-content">
+
+            <div class="dropdown-content-inner">
+
+                <a href="../component/product-list.html?category=Quần áo&sub=Áo">
+                    Áo
+                </a>
+
+                <a href="../component/product-list.html?category=Quần áo&sub=Quần">
+                    Quần
+                </a>
+
             </div>
+
         </div>
-    </nav>
+
+    </div>
+
+</nav>
 </header>
